@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d71604-c603-442c-8fc7-1d03f32c1175" name="Default" comment="" />
+    <list default="true" id="d9d71604-c603-442c-8fc7-1d03f32c1175" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ACO_TSP/Ant.class" afterPath="$PROJECT_DIR$/out/production/ACO_TSP/Ant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ant.java" afterPath="$PROJECT_DIR$/src/Ant.java" />
+    </list>
     <ignored path="ACO_TSP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,14 +29,17 @@
       <file leaf-file-name="Ant.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -53,12 +60,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1272" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -468,15 +475,15 @@
       <workItem from="1479154588200" duration="604000" />
       <workItem from="1479239100310" duration="1018000" />
       <workItem from="1479330776308" duration="141000" />
-      <workItem from="1490012004690" duration="5867000" />
+      <workItem from="1490012004690" duration="8817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30518000" />
+    <option name="totallyTimeSpent" value="33468000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="1272" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -618,8 +625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>

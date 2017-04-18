@@ -28,7 +28,7 @@ public class Ant {
 
     /* Parameters */
     private static final int NO_OF_ANTS = 10;
-    private static final int ITERATIONS = 100;
+    private static final int ITERATIONS = 150;
     private static final double ALPHA = 0.1;
     private static final double BETA = 1;
     private static final double RHO = 0.1;
@@ -40,7 +40,7 @@ public class Ant {
     //private static double iterationBestTourLength;
 
     public static void main(String[] args) {
-        costs = readFile("resources\\eil51.xml", 51);
+        costs = readFile("resources\\kroA100.xml", 100);
         graphSize = costs.length;
         System.out.println(Arrays.deepToString(costs));
         ArrayList<Integer> bestTour = aco(costs);
@@ -170,6 +170,8 @@ public class Ant {
                 globalUpdate(globalBestAnt);
             }
 
+            globalBestAnt = twoOptLocalSearch(globalBestAnt);
+
             // Clear ants information
             for(ArrayList<Integer> ant: ants){
                 ant.clear();
@@ -177,6 +179,47 @@ public class Ant {
         } // Iterations
 
         return globalBestAnt;
+    }
+
+    public static ArrayList<Integer> twoOptMove(ArrayList<Integer> tour, int j, int k){
+        ArrayList<Integer> newTour = new ArrayList<>(tour.subList(0, j));
+        ArrayList<Integer> reverseTour = new ArrayList<>(tour.subList(j, k));
+        Collections.reverse(reverseTour);
+        newTour.addAll(reverseTour);
+        ArrayList<Integer> tourEnd = new ArrayList<>(tour.subList(k, tour.size()));
+        newTour.addAll(tourEnd);
+
+        return newTour;
+    }
+
+
+    public static ArrayList<Integer> twoOptRandom(ArrayList<Integer> tour){
+        int nCities = tour.size();
+        int j = rand.nextInt(nCities);
+        int k = rand.nextInt(nCities);
+        while (j == k) k = rand.nextInt(nCities);
+
+        // Ensure that j is less than k. That is, if j > k, swap j and k
+        int tempCut = j > k ? j : k;
+        if (tempCut == j) {
+            j = k;
+            k = tempCut;
+        }
+        return twoOptMove(tour, j, k);
+    }
+
+    public static ArrayList<Integer> twoOptLocalSearch(ArrayList<Integer> tour){
+        for (int i = 0; i < tour.size(); i++) {
+            for (int j = 0; j < tour.size(); j++) {
+                if(i < j){
+                    ArrayList<Integer> newTour = twoOptMove(tour, i, j);
+                    if (computeTourLength(newTour) < computeTourLength(tour)){
+                        return newTour;
+                    }
+                }
+            }
+        }
+        return tour;
     }
 
     /**
